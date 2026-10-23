@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "site": "https://clinicallywelladjusted.com",
-  "release": "136532cfc851190187a8ba0f8fa199d7e276120292c6c35d17efa087a3b7aa2e",
+  "release": "a31ec37b80df929abe340c2342f0b9a6f62d807fa5f4fa3277af2d226c91099e",
   "files": [
     {
       "path": "2024/12/15/solving-e-polution-one-repair-at-a-time-because-sanity-is-overrated/index.html",
@@ -87,6 +87,11 @@
       "path": "index.html",
       "bytes": 7220,
       "sha256": "a9cd88310a3e19781fb9bf1693b27c2e0e4fa3797f289da83a9249ff106fd6d0"
+    },
+    {
+      "path": "publication-check.json",
+      "bytes": 156,
+      "sha256": "b13d89610c2130ddf4d58d0973eacb5b1d758c9ae345314ab5bd061296b81196"
     },
     {
       "path": "robots.txt",
