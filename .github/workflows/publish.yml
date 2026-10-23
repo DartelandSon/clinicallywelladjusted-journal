@@ -11,7 +11,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
         with:
@@ -44,3 +44,6 @@ jobs:
             git commit -m "Publish source $SOURCE_COMMIT"
             git push origin HEAD:published
           fi
+      - name: Verify live site on Stellar
+        working-directory: publication
+        run: python ../source/.github/scripts/verify_live.py "$(git rev-parse HEAD)" ../source/dist

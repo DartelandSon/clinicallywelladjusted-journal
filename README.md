@@ -68,3 +68,10 @@ existing entries to avoid duplicates, commit approved source to main, verify
 the Actions run, then verify the live URL and deployment.json commit. Log the
 confirmed public URL and commit privately. Routine success and skipped runs stay
 quiet. A commit alone is not proof that the public website updated.
+
+The Actions step "Verify live site on Stellar" waits for the hosting poll,
+checks deployment.json against the immutable published commit, and compares
+every public file's bytes and SHA-256 hash with the generated manifest. Its
+success is required before marking an entry published. The editor can verify
+this step via the GitHub connector when its web reader cannot access the site.
+A failure is a pending/unverified publication, not permission to duplicate it.
