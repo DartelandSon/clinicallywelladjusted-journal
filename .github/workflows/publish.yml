@@ -1,0 +1,46 @@
+name: Publish journal
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: journal-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          path: source
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - name: Build and validate public files
+        working-directory: source
+        run: |
+          python -m pip install -r requirements.txt
+          python -m unittest discover -s tests
+          python build.py
+          test -f dist/authorship/index.html
+          test -f dist/google7807d41d479e3865.html
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: published
+          path: publication
+      - name: Publish verified static release
+        working-directory: publication
+        env:
+          SOURCE_COMMIT: ${{ github.sha }}
+        run: |
+          rsync -a --delete ../source/dist/ dist/
+          git config user.name 'Clinically Well Adjusted Publisher'
+          git config user.email '339776272+DartelandSon@users.noreply.github.com'
+          git add dist
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish source $SOURCE_COMMIT"
+            git push origin HEAD:published
+          fi

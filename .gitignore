@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 deploy/config.json
 deploy/*.log
+dist/

@@ -97,7 +97,7 @@ HTACCESS;
 
 function deploy(array $config): void {
     $repo = $config['repository'] ?? '';
-    $branch = $config['branch'] ?? 'main';
+    $branch = $config['branch'] ?? 'published';
     $base = rtrim($config['directory'] ?? '', '/');
     if (!preg_match('~^[a-zA-Z0-9_-]+/[a-zA-Z0-9_.-]+$~D', $repo) ||
         !preg_match('~^[a-zA-Z0-9_-]+$~D', $branch) ||

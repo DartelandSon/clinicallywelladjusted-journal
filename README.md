@@ -28,7 +28,11 @@ privately. Archive entries require their original public source_url.
 
 ## Publication
 
-Commit an entry and the complete regenerated dist directory in ONE commit.
+Commit approved article Markdown to main using the GitHub connector. GitHub
+Actions builds and tests the site, then commits the complete generated dist to
+the published branch. The server reads only that branch. The editor does not
+need a local shell, hosting credentials, or an AI API key. Standard GitHub-hosted
+runners are free for this public repository; no paid runner or storage is used.
 Do not upload private draft material to this public repository, including on
 branches. Do not publish credentials or private source references in metadata.
 The static deployer checks one immutable Git commit, downloads only allowlisted
@@ -60,7 +64,7 @@ Use public or explicitly cleared material, verify broader factual claims,
 and label corrections. Skip an entry when evidence is insufficient.
 
 The monthly editor should read its durable private instructions first, check
-existing entries to avoid duplicates, build and validate, commit content and
-dist atomically, then verify the live URL and deployment.json commit. Log the
+existing entries to avoid duplicates, commit approved source to main, verify
+the Actions run, then verify the live URL and deployment.json commit. Log the
 confirmed public URL and commit privately. Routine success and skipped runs stay
 quiet. A commit alone is not proof that the public website updated.
