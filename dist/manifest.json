@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "site": "https://clinicallywelladjusted.com",
+  "release": "136532cfc851190187a8ba0f8fa199d7e276120292c6c35d17efa087a3b7aa2e",
+  "files": [
+    {
+      "path": "2024/12/15/solving-e-polution-one-repair-at-a-time-because-sanity-is-overrated/index.html",
+      "bytes": 6142,
+      "sha256": "ac3277725f81d70280ec0db6e2a08ba0ae47320dad88369fa447609009a232d0"
+    },
+    {
+      "path": "2024/12/18/synergies-works-blaze-accelerator/index.html",
+      "bytes": 6386,
+      "sha256": "d8dc304c2b592dbe2b4ae2afa95905c5238fca52a2a8c3e58e5cdb9534f9f2ce"
+    },
+    {
+      "path": "2025/05/18/still-clinically-well-adjusted-mostly/index.html",
+      "bytes": 5822,
+      "sha256": "b39a6457612d44efc36d54b5c2cd858231ded1730bc3437b791931fc4d698f2b"
+    },
+    {
+      "path": "2025/06/22/changing-meds-again/index.html",
+      "bytes": 4891,
+      "sha256": "f921eb17e93f88153ff9bdcdfb7470263b41689b68344824ef103337a6a5225b"
+    },
+    {
+      "path": "2025/06/22/sleep-the-final-boss-of-recovery/index.html",
+      "bytes": 6274,
+      "sha256": "19202358d3e37d59d17291bbbed85822c79463ae9f8d306cb100881b22181437"
+    },
+    {
+      "path": "2025/11/30/on-kicking-rocks-and-bruising-butts/index.html",
+      "bytes": 6160,
+      "sha256": "15e22b830a06293f5d61bf95edf8a40e072a83cf5c576171e889506c015c422c"
+    },
+    {
+      "path": "404.html",
+      "bytes": 2365,
+      "sha256": "1bb811ace70f28f157cd7e7324d3017b5991b38d04633fe0df4cf25b13d36c69"
+    },
+    {
+      "path": "about/index.html",
+      "bytes": 3350,
+      "sha256": "c35c6fd923641c673822a8e1167e0a761e45a76f212c5e2016cf10d3b26640a6"
+    },
+    {
+      "path": "archive/index.html",
+      "bytes": 7265,
+      "sha256": "99c479e0c4c0c97e844f9a11d04d274aaba27e7c289a8f39a525b1f45067d625"
+    },
+    {
+      "path": "assets/favicon.svg",
+      "bytes": 227,
+      "sha256": "1909cddc4f7bfe4c245881c13cb6eb968f55ab54c5032848f87035b55ce63d62"
+    },
+    {
+      "path": "assets/journal.css",
+      "bytes": 10005,
+      "sha256": "cb51fd7b3d1df53695bc96b864c8beb6551a61f12304a4380f12c43d81e1ad84"
+    },
+    {
+      "path": "assets/journal.js",
+      "bytes": 2618,
+      "sha256": "186655418d84f09e1e49a33ab58186c00fb53d9044fb0d7721c5e67d690d3257"
+    },
+    {
+      "path": "authorship/index.html",
+      "bytes": 4290,
+      "sha256": "671d985cf7eb17b8bd9f91e26fcbbcaaf2ec7e6dac94c98c403c447634baf535"
+    },
+    {
+      "path": "book/index.html",
+      "bytes": 3971,
+      "sha256": "9208eb64b7e375e773a3559411b5bd450a3c6efc1f8eba81faac77fff3fd6cf6"
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 3712,
+      "sha256": "69e8a6e6f99a9430111669daefdb67e92cce10a75965b5d2d8698ff56737b296"
+    },
+    {
+      "path": "google7807d41d479e3865.html",
+      "bytes": 53,
+      "sha256": "84aa01f598f80e95fa0b44a518ffa5e3efe406c35f19c7b031821766b9ba6669"
+    },
+    {
+      "path": "index.html",
+      "bytes": 7220,
+      "sha256": "a9cd88310a3e19781fb9bf1693b27c2e0e4fa3797f289da83a9249ff106fd6d0"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 79,
+      "sha256": "b65970086f7ed0ed39180e495e2eda4d14ac5a63d45e34d6af542f06548be24d"
+    },
+    {
+      "path": "search-index.json",
+      "bytes": 15496,
+      "sha256": "2493a4afd5440c6dfeaa4ecccedd9561aa6e451ba46c800a288e8dc56eb36ae4"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 1060,
+      "sha256": "5362fd6092ababe32be7e73adac15e28d0008f6d88018b6ff23d6b645db833b4"
+    }
+  ]
+}
