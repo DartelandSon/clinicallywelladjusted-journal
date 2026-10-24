@@ -63,6 +63,19 @@ personal information. Keep a private evidence note and publication ledger.
 Use public or explicitly cleared material, verify broader factual claims,
 and label corrections. Skip an entry when evidence is insufficient.
 
+Each future post should reward the reader beyond a record of events: an earned
+lesson, useful or surprising insight, fresh connection, deeper understanding,
+or a specific unanswered question worth considering. Let that thought grow from
+the documented experience and develop it in the prose. One strong thought is
+enough; no generic inspirational ending, forced moral, or required lesson heading.
+Privately state the reader's takeaway or question in one sentence before publishing,
+and verify the draft actually delivers it. Improve the angle rather than add filler.
+
+Preserve already-published article text and dates, including the original archive
+and the accepted first new entry. New editorial preferences apply to future
+writing; do not retroactively rewrite old posts without Curtis's explicit request.
+Handle any necessary factual correction separately and transparently.
+
 Curtis's length reference is "On Kicking Rocks and Bruising Butts": about 420
 words. Keep entries short, direct and focused; longer or shorter is allowed
 when the content warrants it. This is a guide, not a word limit.
