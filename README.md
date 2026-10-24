@@ -63,7 +63,21 @@ personal information. Keep a private evidence note and publication ledger.
 Use public or explicitly cleared material, verify broader factual claims,
 and label corrections. Skip an entry when evidence is insufficient.
 
-The monthly editor should read its durable private instructions first, check
+Curtis's length reference is "On Kicking Rocks and Bruising Butts": about 420
+words. Keep entries short, direct and focused; longer or shorter is allowed
+when the content warrants it. This is a guide, not a word limit.
+
+The editor checks quietly each Sunday at 10 a.m. Indianapolis time. Aim to
+publish roughly every two weeks, with additional worthwhile posts or fewer
+when the material demands. There is no monthly cap. Reconcile pending entries
+and avoid duplicate topics or writes; do not fill a publishing slot with filler.
+
+Keep "On Kicking Rocks and Bruising Butts" pinned on the homepage. Its route is
+configured by pinned_entry in site.json; never change it without Curtis's
+instruction. Preserve the original article's text and date. New entries appear
+in the ongoing record below it; the archive and RSS stay chronological.
+
+The editor should read its durable private instructions first, check
 existing entries to avoid duplicates, commit approved source to main, verify
 the Actions run, then verify the live URL and deployment.json commit. Log the
 confirmed public URL and commit privately. Routine success and skipped runs stay

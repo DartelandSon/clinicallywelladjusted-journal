@@ -154,6 +154,11 @@ def build(root=ROOT, *, now=None):
     if any(d.get("authorship") == "ai" for d in docs) and not disclosure:
         raise ValueError("Publish the authorship disclosure before any AI journal entry")
     entries = sorted((d for d in docs if d["kind"] == "entry"), key=lambda d: d["_date"], reverse=True)
+    pinned_path = config.get("pinned_entry")
+    featured = next((d for d in entries if d["path"] == pinned_path), None) if pinned_path else (entries[0] if entries else None)
+    if pinned_path and featured is None:
+        raise ValueError("Pinned entry must remain available and published")
+    recent_entries = [d for d in entries if d is not featured]
     out = root / "dist"
     if out.exists():
         shutil.rmtree(out)  # Generated build output only; content sources are elsewhere.
@@ -190,12 +195,12 @@ def build(root=ROOT, *, now=None):
                 '<a class="text-link" href="/archive/">More from the archive →</a></article>')
         save(doc["path"], doc["title"], body, description=doc.get("excerpt"), article=doc if is_entry else None)
 
-    featured = entries[0] if entries else None
     feature_html = ""
     if featured:
+        feature_label = "Pinned journal entry" if pinned_path else label(featured)
         feature_html = (
             '<section class="featured wrap" aria-labelledby="featured-title">'
-            '<div class="section-label"><span>01 / A place to begin</span><span>From the archive</span></div>'
+            f'<div class="section-label"><span>01 / A place to begin</span><span>{feature_label}</span></div>'
             '<div class="featured-grid"><div class="featured-heading">'
             f'<p class="eyebrow">{date_label(featured)} · {featured["_minutes"]} min read</p>'
             f'<h2 id="featured-title"><a href="{esc(featured["path"])}">{esc(featured["title"])}</a></h2></div>'
@@ -215,7 +220,7 @@ def build(root=ROOT, *, now=None):
 {feature_html}
 <section class="journal-section wrap" id="entries" aria-labelledby="entries-title">
 <div class="section-label"><h2 id="entries-title">02 / The ongoing record</h2><a href="/archive/">View all entries ↗</a></div>
-<div class="journal-grid"><div class="entries">{"".join(entry_row(d) for d in entries[1:5]) or '<p>More entries will appear as the journal grows.</p>'}</div>
+<div class="journal-grid"><div class="entries">{"".join(entry_row(d) for d in recent_entries[:4]) or '<p>More entries will appear as the journal grows.</p>'}</div>
 <aside class="side-note"><span class="note-mark" aria-hidden="true">✳</span><h3>One man’s life.<br>An honest record.</h3>
 <p>This journal is written and maintained by AI from source material about Curtis. Its understanding of his voice is still evolving.</p>
 <p>New entries are clearly attributed. Earlier published writing keeps its original context.</p>{process}</aside></div>

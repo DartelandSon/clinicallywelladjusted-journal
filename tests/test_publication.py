@@ -16,6 +16,7 @@ class PublicationTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
         shutil.copyfile(build.ROOT / "site.json", self.root / "site.json")
+        self.configure_pin(None)
         for folder in ["content", "assets", "public"]:
             (self.root / folder).mkdir()
 
@@ -29,6 +30,39 @@ class PublicationTests(unittest.TestCase):
 
     def page(self, path="/about/", published=True):
         return {"title": "Test", "path": path, "kind": "page", "published": published}
+
+    def configure_pin(self, route):
+        path = self.root / "site.json"
+        config = json.loads(path.read_text())
+        config["pinned_entry"] = route
+        path.write_text(json.dumps(config))
+
+    def test_newer_post_does_not_displace_pin_or_disappear_from_home(self):
+        self.configure_pin("/pinned/")
+        self.write("authorship.md", self.page("/authorship/"), "Disclosure")
+        self.write("pinned.md", {**self.page("/pinned/"), "title": "Pinned reference", "kind": "entry",
+                                 "date": "2025-01-01T00:00:00Z", "authorship": "archive",
+                                 "source_url": "https://clinicallywelladjusted.wordpress.com/pinned/"}, "Original words.")
+        self.write("newer.md", {**self.page("/newer/"), "title": "New journal entry", "kind": "entry",
+                                "date": "2026-01-01T00:00:00Z", "authorship": "ai",
+                                "source_note_recorded": True}, "Supported new words.")
+        build.build(self.root, now=datetime(2026, 10, 23, tzinfo=timezone.utc))
+        home = (self.root / "dist/index.html").read_text()
+        feature = home.split('aria-labelledby="featured-title">', 1)[1].split('</section>', 1)[0]
+        recent = home.split('id="entries"', 1)[1]
+        self.assertIn("Pinned journal entry", feature)
+        self.assertIn('href="/pinned/"', feature)
+        self.assertNotIn("New journal entry", feature)
+        self.assertIn("New journal entry", recent)
+        self.assertNotIn("Pinned reference", recent)
+        for name in ["archive/index.html", "feed.xml"]:
+            text = (self.root / "dist" / name).read_text()
+            self.assertLess(text.index("New journal entry"), text.index("Pinned reference"))
+
+    def test_missing_pin_stops_publication_instead_of_silently_replacing_it(self):
+        self.configure_pin("/missing/")
+        with self.assertRaisesRegex(ValueError, "Pinned entry"):
+            build.build(self.root)
 
     def test_private_and_future_content_does_not_leak(self):
         self.write("draft.md", self.page(published=False), "PRIVATE_SENTINEL_41")
