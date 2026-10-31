@@ -61,7 +61,8 @@ events, dialogue, memories, motives, or current activity. Private research
 access does not authorize publishing every private fact or another person's
 personal information. Keep a private evidence note and publication ledger.
 Use public or explicitly cleared material, verify broader factual claims,
-and label corrections. Skip an entry when evidence is insufficient.
+and label corrections. When one story has insufficient evidence, choose another
+supported, cleared subject for the regular weekly entry.
 
 Each future post should reward the reader beyond a record of events: an earned
 lesson, useful or surprising insight, fresh connection, deeper understanding,
@@ -80,10 +81,18 @@ Curtis's length reference is "On Kicking Rocks and Bruising Butts": about 420
 words. Keep entries short, direct and focused; longer or shorter is allowed
 when the content warrants it. This is a guide, not a word limit.
 
-The editor checks quietly each Sunday at 10 a.m. Indianapolis time. Aim to
-publish roughly every two weeks, with additional worthwhile posts or fewer
-when the material demands. There is no monthly cap. Reconcile pending entries
-and avoid duplicate topics or writes; do not fill a publishing slot with filler.
+Publish a regular entry every week through the Sunday 10 a.m. Indianapolis
+editor run. Curtis set this cadence on 30 October 2026, superseding the earlier
+two-week target and permission for routinely fewer posts.
+
+Publish additional special entries outside the schedule when the editor considers
+their importance sufficient. Specials never satisfy, replace, cancel, postpone,
+or reset a regular weekly post. Track regular weekly slots separately from
+special entries in the private ledger; a recent special is no reason to skip
+Sunday's post. Reconcile pending entries and avoid duplicate topics or writes.
+Choose another supported subject when necessary to maintain weekly continuity;
+do not invent facts or add filler. Repair genuine publishing failures and recover
+blocked weekly slots promptly without moving later weekly slots.
 
 Keep "On Kicking Rocks and Bruising Butts" pinned on the homepage. Its route is
 configured by pinned_entry in site.json; never change it without Curtis's
