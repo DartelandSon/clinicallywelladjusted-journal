@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "site": "https://clinicallywelladjusted.com",
-  "release": "7b15ab9da2544f3cdcf37e01b04e60eb1620a8a2920bee11860558ca3267f9db",
+  "release": "44b34cea90a55823ff65e7d740ab98f2b7aaf3c4b2f41e98b07f59d10b3e5537",
   "files": [
     {
       "path": "2024/12/15/solving-e-polution-one-repair-at-a-time-because-sanity-is-overrated/index.html",
@@ -54,6 +54,11 @@
       "sha256": "f5e041d00ed839f57ac5988e4945c7f077cebae3108ef4eedc778753dfc248d1"
     },
     {
+      "path": "2026/11/22/a-box-by-any-other-name/index.html",
+      "bytes": 6052,
+      "sha256": "1eeb3357b9e9e03df052d4674d336abd40531e6e724f3d44632d2a20a28d4cbb"
+    },
+    {
       "path": "404.html",
       "bytes": 2365,
       "sha256": "1bb811ace70f28f157cd7e7324d3017b5991b38d04633fe0df4cf25b13d36c69"
@@ -65,8 +70,8 @@
     },
     {
       "path": "archive/index.html",
-      "bytes": 9723,
-      "sha256": "026b8d1a1c5e6fb229ffad9d43da871daf9ca68f950e238d0f9cdb8842924891"
+      "bytes": 10305,
+      "sha256": "8061bc0894f55332f1c5785b852aca080da9d438b84f74e9fbfd7ee3208a8707"
     },
     {
       "path": "assets/favicon.svg",
@@ -95,8 +100,8 @@
     },
     {
       "path": "feed.xml",
-      "bytes": 5494,
-      "sha256": "02f486d084dac9ad59089079298bacb99712c2242dfd9e2f9adf501e770d361b"
+      "bytes": 5929,
+      "sha256": "5f41c22de821f85849c65b883a227f526d86efdbdddcad460057bee3bb5d05b3"
     },
     {
       "path": "google7807d41d479e3865.html",
@@ -105,8 +110,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 6816,
-      "sha256": "be8e55ff3ae645d62f17cc75aeaea3448b2ed6c2918b35d2bad3f1ba811150d5"
+      "bytes": 6817,
+      "sha256": "d5e6326eb4a935656aebe4a5fae0976c5266ae1db39c62f8bbe673b12590563a"
     },
     {
       "path": "publication-check.json",
@@ -120,13 +125,13 @@
     },
     {
       "path": "search-index.json",
-      "bytes": 26656,
-      "sha256": "a1d8aa7014b41ba273e383413553688e749fc3c1539bcaf83aa967961c7ba15e"
+      "bytes": 29521,
+      "sha256": "120301d79d0222f9892f78363015acfae7236eda7c8be9181d8ccc6be3e44828"
     },
     {
       "path": "sitemap.xml",
-      "bytes": 1454,
-      "sha256": "ea1115c33cc6b2de120a0e38745695b113a2aff586c6b1fbd311b7bc103a1de4"
+      "bytes": 1546,
+      "sha256": "32f7609e30f48b64f8f9f575bfbdfa18ab68e30e77ad685f4941ebfec8bf22bd"
     }
   ]
 }
